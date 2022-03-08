@@ -23,6 +23,7 @@ class CategoriesScreen extends StatelessWidget {
           return CategoryItem(
             catData.title,
             catData.backgroundColor,
+            catData.id,
           );
         }).toList(),
       ),
