@@ -406,4 +406,38 @@ const DUMMY_MEALS = [
     isVegetarian: true,
     isLactoseFree: true,
   ),
+  Meal(
+    id: 'm11',
+    categories: [
+      'c2',
+      'c5',
+      'c6',
+    ],
+    title: 'Piraniya Fish with Cherry Tomatoes',
+    affordability: Affordability.Luxurious,
+    complexity: Complexity.Simple,
+    imageUrl:
+        'https://scontent.fgyd4-2.fna.fbcdn.net/v/t1.6435-9/74812793_2577911715629366_8479297686153986048_n.jpg?_nc_cat=103&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=pMoAUueQESsAX8jthny&_nc_ht=scontent.fgyd4-2.fna&oh=00_AT8sGzuhYY4Mhj_73C-_iQLvOnc5ckaK3VziKLfhOLFpVw&oe=624E1FFE',
+    duration: 30,
+    ingredients: [
+      'White and Green Asparagus',
+      '30g Pine Nuts',
+      '300g Cherry Tomatoes',
+      'Salad',
+      'Salt, Pepper and Olive Oil'
+    ],
+    steps: [
+      'Wash, peel and cut the asparagus',
+      'Cook in salted water',
+      'Salt and pepper the asparagus',
+      'Roast the pine nuts',
+      'Halve the tomatoes',
+      'Mix with asparagus, salad and dressing',
+      'Serve with Baguette'
+    ],
+    isGlutenFree: true,
+    isVegan: true,
+    isVegetarian: true,
+    isLactoseFree: true,
+  ),
 ];
