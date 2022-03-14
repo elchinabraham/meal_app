@@ -1,25 +1,35 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
+import 'package:meal_app/models/meal.dart';
 import 'package:meal_app/screens/categories_screen.dart';
 import 'package:meal_app/screens/favorites_screen.dart';
 import 'package:meal_app/widgets/main_drawer.dart';
 
 class TabsScreen extends StatefulWidget {
-  const TabsScreen({Key? key}) : super(key: key);
+  final List<Meal> favoriteMeals;
+  TabsScreen(this.favoriteMeals);
 
   @override
   State<TabsScreen> createState() => _TabsScreenState();
 }
 
 class _TabsScreenState extends State<TabsScreen> {
-  final List<Widget> _pages = [
-    CategoriesScreen(),
-    FavoritesScreen(),
-  ];
+  List<Widget> _pages = [];
 
   int _selectedPageIndex = 0;
   String appTitle = "Categories";
+
+  @override
+  void initState() {
+    _pages = [
+      CategoriesScreen(),
+      FavoritesScreen(widget.favoriteMeals),
+    ];
+    super.initState();
+  }
 
   void _selectPage(int index) {
     setState(() {

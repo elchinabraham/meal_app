@@ -1,11 +1,13 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:meal_app/models/meal.dart';
 import 'package:meal_app/screens/categories_screen.dart';
 import 'package:meal_app/screens/favorites_screen.dart';
 
 class TabsScreenDefault extends StatefulWidget {
-  const TabsScreenDefault({Key? key}) : super(key: key);
+  final List<Meal> favorteMeals;
+  TabsScreenDefault(this.favorteMeals);
 
   @override
   State<TabsScreenDefault> createState() => _TabsScreenDefaultState();
@@ -38,7 +40,7 @@ class _TabsScreenDefaultState extends State<TabsScreenDefault> {
           // ignore: prefer_const_literals_to_create_immutables
           children: <Widget>[
             CategoriesScreen(),
-            FavoritesScreen(),
+            FavoritesScreen(widget.favorteMeals),
           ],
         ),
       ),
